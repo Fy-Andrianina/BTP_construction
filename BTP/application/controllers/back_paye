@@ -1,0 +1,46 @@
+ // public function process_payment(){
+    //     $data['default_montant']=$this->input->post("montant");
+    //     $data['default_date']=$this->input->post("date");
+    //     $data['iddevis_client']=$this->input->post("iddevis_client");
+    //     if(!empty($data['default_montant']) && !empty($data['default_date'])){
+    //         $devis_payements=$this->G->get_Data_By_Columns(array("iddevis_client"=>$this->input->post("iddevis_client")),"v_payement_etat_devis");
+    //         $devis_payement=$devis_payements[0];
+
+    //         $date_creation_devis=new DateTime($devis_payement['date']);
+    //         $date_payement=new DateTime($data['default_date']);
+
+    //         if($date_payement<$date_creation_devis){
+                
+    //             $data['error'] = "La date de début de construction ne doit pas etre antérieure à la date de creation du devis qui est ".$devis_payement['date'];
+                
+    //         }else{
+    //             if($data['default_montant']<=0){
+                
+    //                 $data['error'] = "Le montant doit etre de valeur positive et non 0 ou negative";
+    //             }else{
+    //                 $montant=0;
+    //                 if($data['default_montant'] >= $devis_payement['reste_a_payer']){
+    //                     $montant= $devis_payement['reste_a_payer'];
+    //                 }else if($data['default_montant'] < $devis_payement['reste_a_payer']){
+    //                     $montant= $data['default_montant'];
+    //                 }
+    //                 try{
+    //                     $this->PaieModel->insert_payement($data['default_date'],$montant,$devis_payement['iddevis_client']);
+    //                 }catch (Exception $e) {
+    //                         // Une erreur s'est produite lors de l'insertion, lancer une exception avec un message d'erreur
+    //                         $data['error']= $e->getMessage();
+    //                 }
+    //             }
+    //         }
+
+    //     }else{
+    //         $data['error']="Veiller completer toutes les champs";
+    //     }
+    //     $data['content']="paye/form_paye";
+    //     $this->load->view("template",$data);
+    // }
+ 
+    // public function show_error($erreur){
+    //     $data['erreur'] = urldecode($erreur);
+    //     $this->load->view('errors/erreur_view',$data);
+    // }

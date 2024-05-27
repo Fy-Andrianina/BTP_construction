@@ -1,0 +1,1 @@
+CREATE TABLE personne(id serial,nom varchar);
